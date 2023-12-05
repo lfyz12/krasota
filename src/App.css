@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo_box {
+  height: 75%;
+  width: 15%;
+  min-height: 48px;
+  min-width: 148px;
+  background-image: url('./assets/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main_nav {
+  position: fixed;
+ z-index: 3;
+  width: 100vw;
+  height: 4vw;
+  border-bottom: 1px solid #dfdfdf;
+  min-height: 56px;
+  background-color: #ffffff
+}
+
+.nav_content {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex ;
+  justify-content: space-between;
+  align-items: center ;
+}
+
+@media (max-width: 999px) {
+  .nav_content {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 1%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav_items_box {
   display: flex;
-  flex-direction: column;
+  width: 40%;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav_item {
+    font-size: calc(12px + 6 * (100vw/1903));
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav_item:hover {
+  color: pink !important;
+  transition: all 300ms ease-in-out;
 }
