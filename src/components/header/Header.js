@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BurgerMenu from './BurgerMenu';
+import { NavLink } from 'react-router-dom';
+import { ABOUT_ROUTE, CONTACT_ROUTE, MAIN_ROUTE, SERVICE_ROUTE } from '../../util/consts';
 const Header = () => {
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
@@ -19,10 +21,10 @@ const Header = () => {
           <div className='logo_box'>
           </div>
           {width > 999 && <div className='nav_items_box'>
-            <span className='nav_item'>Главная</span>
-            <span className='nav_item'>О нас</span>
-            <span className='nav_item'>Услуги</span>
-            <span className='nav_item'>Контакты</span>
+            <NavLink className='nav_item text-decoration-none' to={MAIN_ROUTE}>Главная</NavLink>
+            <NavLink className='nav_item text-decoration-none' to={ABOUT_ROUTE}>О нас</NavLink>
+            <NavLink className='nav_item text-decoration-none' to={SERVICE_ROUTE}>Услуги</NavLink>
+            <NavLink className='nav_item text-decoration-none' to={CONTACT_ROUTE}>Контакты</NavLink>
           </div>}
         </div>
       </nav>

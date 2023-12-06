@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './booksection.css'
 import { Dropdown, Form } from 'react-bootstrap';
-const BookSection = () => {
+const BookSection = ({...props}) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -24,7 +24,7 @@ const BookSection = () => {
 
       }
     return (
-        <div className='book_page'>
+        <div className='book_page' id='book'>
              <Form noValidate validated={validated} className='form_check_order' onSubmit={confirmOrder}>
                    <h2 className='form_check_title'>Назначить встречу</h2>
                    <div className='form_input_section mt-3'>

@@ -1,22 +1,16 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import AppRoutes from './components/AppRoutes';
 import Header from './components/header/Header';
-import CaruselHead from './components/main/CaruselHead';
-import AboutSection from './components/main/AboutSection';
-import ServicesSection from './components/main/ServicesSection';
-import BookSection from './components/main/BookSection';
+
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header/>
-      <CaruselHead/>
-      <AboutSection/>
-      <ServicesSection/>
-      <BookSection/>
-    </div>
+      <AppRoutes/>
+    </BrowserRouter>
   );
 }
 

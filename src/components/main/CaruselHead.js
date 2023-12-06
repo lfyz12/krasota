@@ -6,6 +6,7 @@ import thirdPict from '../../assets/pic-3.jpg'
 import Nav from 'react-bootstrap/Nav'
 
 import './carusel.css'
+import UiButton from './UiButton';
 
 const CaruselHead = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -24,7 +25,7 @@ const CaruselHead = () => {
                 <Carousel.Item>
                     <img
                         className='d-block img'
-                        src={firstPict}
+                        src={width <= 799 ? '' : firstPict}
                         alt='firstPicture'
                     />
                     <div className='carusel_item_text'>
@@ -37,9 +38,7 @@ const CaruselHead = () => {
                        Салон красоты Solari предлагает новейшие и высококачественные услуги для вас и всех членов вашей семьи. 
                        Мы специализируемся на всех косметических процедурах, и наша команда полностью профессиональна и инновационна, от макияжа до укладки волос.
                        </p>
-                       <button className='carusel_item_btn mt-3'>
-                        Записаться
-                    </button>
+                       <UiButton>Записаться</UiButton>
                     </div>
         
                 </Carousel.Item>
@@ -47,7 +46,7 @@ const CaruselHead = () => {
 
                     <img
                         className='d-block  img'
-                        src={secondPict}
+                        src={width <= 799 ? '' : secondPict}
                         alt='firstPicture'
                     />
                     <div className='carusel_item_text'>
@@ -61,16 +60,14 @@ const CaruselHead = () => {
                        Мы предлагаем полный спектр парикмахерских услуг для мужчин и женщин, уход за бровями и ресницами, услуги визажистов и стилистов. 
                        Доверьте свою красоту профессионалам, которым действительно небезразличен ваш стиль и внешний вид!
                        </p>
-                       <button className='carusel_item_btn mt-3'>
-                        Записаться
-                    </button>
+                       <UiButton>Записаться</UiButton>
                     </div>
 
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className='d-block img'
-                        src={thirdPict}
+                        src={width <= 799 ? '' : thirdPict}
                         alt='firstPicture'
                     />
                     <div className='carusel_item_text'>
@@ -86,9 +83,7 @@ const CaruselHead = () => {
                        В Solari вы можете побаловать себя и воспользоваться преимуществами профессионального косметического ухода по доступной цене.
                         Наслаждайтесь своей жизнью благодаря нашим высококачественным косметическим услугам.
                        </p>
-                       <button className='carusel_item_btn mt-3'>
-                        Записаться
-                    </button>
+                        <UiButton>Записаться</UiButton>
                     </div>
      
                 </Carousel.Item>
