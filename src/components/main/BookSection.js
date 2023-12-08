@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './booksection.css'
 import { Dropdown, Form } from 'react-bootstrap';
-const BookSection = ({...props}) => {
+const BookSection = ({service, master, ...props}) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [comment, setcomment] = useState('')
     const [services, setServices] = useState(['Укладка', 'Макияж', 'Маникюр', 'Массаж', 'СПА', 'Косметология'])
     const [validated, setValidated] = useState(false);
+
     function confirmOrder(event) {
         const form = document.querySelector('.form_check_order');
         event.preventDefault();

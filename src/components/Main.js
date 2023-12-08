@@ -9,7 +9,7 @@ const Main = () => {
         <div>
             <CaruselHead/>
             <AboutSection/>
-            <ServicesSection/>
+            <ServicesSection className='service_page'/>
             <BookSection/>
         </div>
     );

@@ -8,7 +8,7 @@ import massage from '../../assets/massage.jpg'
 import Button from 'react-bootstrap/Button';
 import CardService from './CardService';
 import './service.css'
-const ServicesSection = () => {
+const ServicesSection = ({...props}) => {
     const [imagesList, setImagesList] = useState([
         {
         image: hairPic,
@@ -42,7 +42,7 @@ const ServicesSection = () => {
         }
     ])
     return (
-        <div className='service_page'>
+        <div {...props}>
             <div className='service_title mt-3'>
                 Наши услуги
                 <hr className='sep_line'/>
